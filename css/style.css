@@ -111,6 +111,10 @@ ol {
   Helper CSS
 -----------------------*/
 
+.logo {
+    width: 200px;
+}
+
 .section-title {
     margin-bottom: 50px;
     text-align: center;
@@ -3421,6 +3425,12 @@ ol {
 /* Small Device = 320px */
 
 @media only screen and (max-width: 479px) {
+    .hero__item {
+        padding-left: 40px;
+    }
+    .hero__text {
+        text-align: center;
+    }
     .hero__search__form form .hero__search__categories {
         display: none;
     }
