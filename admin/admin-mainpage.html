@@ -57,7 +57,7 @@
                 <div class="row">
                     <a href="../admin/index.html"><img src="../img/logo.png" alt="" class="image" /></a>
                     <ul class="list">
-                        <li class="item"><a href="#!">User</a></li>
+                        <li class="item"><a href="./user.html">User</a></li>
                         <li class="item"><a href="#!">Income</a></li>
                         <li class="item"><a href="#!">Product</a></li>
                         <li class="item"><a href="#!">Service</a></li>
@@ -69,7 +69,7 @@
             </div>
         </header>
 
-        <main class="main">
+        <main class="main-mainpage">
             <div class="content">
                 <div class="row">
                     <!-- Info -->
@@ -108,17 +108,31 @@
         <footer class="footer">
             <div class="content">
                 <div class="social-media">
-                    <a href="https://www.instagram.com/">
+                    <a target="_blank" rel="noopener" href="https://www.instagram.com/">
                         <img src="../img/instagram.svg" alt="" class="image" />
                     </a>
-                    <a href="https://www.facebook.com/">
+                    <a target="_blank" rel="noopener" href="https://www.facebook.com/">
                         <img src="../img/facebook.svg" alt="" class="image" />
                     </a>
-                    <a href="https://twitter.com/">
+                    <a target="_blank" rel="noopener" href="https://twitter.com/">
                         <img src="../img/twiiter.svg" alt="" class="image" />
                     </a>
                 </div>
             </div>
         </footer>
+
+        <!-- Secure login with JS -->
+        <script>
+            let password = prompt("Enter password:");
+            if (password === null) {
+                console.log("User cancelled the prompt.");
+            } else if (password === "tofushop") {
+                // Allow access to the page
+                alert("Login successfully !!");
+            } else {
+                alert("Incorrect password. Please try again.");
+                document.body.style.display = "none";
+            }
+        </script>
     </body>
 </html>
