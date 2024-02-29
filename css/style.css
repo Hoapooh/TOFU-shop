@@ -2069,7 +2069,8 @@ ol {
     display: inline-block;
 }
 
-.footer__widget {
+.footer__about .desc {
+    width: 85%;
 }
 
 .footer__widget h5 {
