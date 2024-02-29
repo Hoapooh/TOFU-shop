@@ -329,7 +329,7 @@ ol {
 }
 
 .header__menu .list .item:hover > a {
-    color: #7fad39;
+    color: #f2d349;
 }
 
 .header__menu .list .item:last-child {
@@ -382,7 +382,7 @@ ol {
 .header__cta__list li a span {
     height: 13px;
     width: 13px;
-    background: #7fad39;
+    background: red;
     font-size: 10px;
     color: #ffffff;
     line-height: 13px;
@@ -419,16 +419,16 @@ ol {
     font-size: 16px;
     font-weight: 600;
     padding: 6px 24px;
-    border-radius: 6px;
-    border: 1px solid #7fad39;
-    color: #7fad39;
+    border-radius: 96px;
+    border: 1px solid #f2d349;
+    color: #f2d349;
     font-size: 20px;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
         box-shadow 0.15s ease-in-out;
 }
 
 .header__cta__list .btn-cta:hover {
-    background: #7fad39;
+    background: #f2d349;
     color: #ffffff;
 }
 
