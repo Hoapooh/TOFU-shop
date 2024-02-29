@@ -30,9 +30,17 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
 html,
 body {
-    font-family: "Cairo", sans-serif;
+    font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
 }
@@ -50,7 +58,7 @@ h6 {
 }
 
 h1 {
-    font-size: 70px;
+    font-size: 60px;
 }
 
 h2 {
@@ -75,11 +83,8 @@ h6 {
 
 p {
     font-size: 16px;
-    font-family: "Cairo", sans-serif;
     color: #6f6f6f;
     font-weight: 400;
-    line-height: 26px;
-    margin: 0 0 15px 0;
 }
 
 img {
@@ -253,7 +258,8 @@ ol {
   Header
 -----------------------*/
 .header {
-    background: #fffcf4;
+    /* first color: #fffcf4 */
+    background: #efede0;
     position: sticky;
     top: 0;
     z-index: 9;
@@ -368,7 +374,7 @@ ol {
     position: relative;
 }
 
-.header__cta__list li a i {
+.header__cta__list li i {
     font-size: 18px;
     color: #1c1c1c;
 }
@@ -385,7 +391,7 @@ ol {
     display: inline-block;
     border-radius: 50%;
     position: absolute;
-    top: 0;
+    top: -10px;
     right: -12px;
 }
 
@@ -417,6 +423,8 @@ ol {
     border: 1px solid #7fad39;
     color: #7fad39;
     font-size: 20px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
 }
 
 .header__cta__list .btn-cta:hover {
@@ -429,7 +437,13 @@ ol {
 -----------------------*/
 
 .hero {
-    padding-bottom: 50px;
+    padding: 50px 0;
+}
+
+.hero-mainpage {
+    background: #efede0;
+    height: calc(100vh - 70px);
+    padding: 50px 0 100px;
 }
 
 .hero.hero-normal {
@@ -595,30 +609,99 @@ ol {
 }
 
 .hero__item {
-    height: 431px;
     display: flex;
     align-items: center;
-    padding-left: 75px;
+    position: relative;
 }
 
-.hero__text span {
-    font-size: 14px;
-    text-transform: uppercase;
+.hero__ads {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    gap: 40px;
+    border-radius: 96px;
+    box-shadow: 0px 24px 50px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(2px);
+    background: #fff;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    z-index: 3;
+}
+
+.hero__ads p {
+    margin: 0;
+}
+
+.hero__ads .sub-title {
+    color: #000;
+    font-size: 25px;
     font-weight: 700;
-    letter-spacing: 4px;
-    color: #7fad39;
 }
 
-.hero__text h2 {
-    font-size: 46px;
-    color: #252525;
-    line-height: 52px;
-    font-weight: 700;
-    margin: 10px 0;
+.hero__ads .separate {
+    width: 1px;
+    height: 40px;
+    opacity: 0.5;
+    background: #909090;
 }
 
-.hero__text p {
-    margin-bottom: 35px;
+.hero__ads .btn {
+    color: #fff;
+    text-align: center;
+    padding: 16px 30px;
+    font-family: Poppins;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 96px;
+    background: #f2d349;
+}
+
+.hero__ads .btn:hover {
+    color: #f2d349;
+    background: #5c6e58;
+}
+
+.hero__text {
+    width: 37.5%;
+}
+
+.hero__text .title {
+    font-family: Sen;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.hero__text .desc {
+    margin: 12px 0 35px;
+}
+
+.hero__text .text1 {
+    color: #8aa899;
+}
+
+.hero__text .text2 {
+    color: #5c6e58;
+}
+
+.hero__image {
+    width: 62.5%;
+    position: relative;
+}
+
+.hero__image .ornament {
+    display: flex;
+    margin-left: auto;
+    width: 90%;
+}
+
+.hero__image .car-hero {
+    width: 100%;
+    position: absolute;
+    right: 25px;
+    top: 40px;
 }
 
 /*---------------------
@@ -2411,7 +2494,7 @@ ol {
 
 @media only screen and (min-width: 1200px) {
     .container {
-        max-width: 1170px;
+        max-width: 1280px;
     }
 }
 
