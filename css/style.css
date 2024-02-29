@@ -2043,7 +2043,8 @@ ol {
 -----------------------*/
 
 .footer {
-    background: #f3f6fa;
+    margin-top: 100px;
+    background: #efede0;
     padding-top: 70px;
     padding-bottom: 0;
 }
@@ -2060,6 +2061,7 @@ ol {
 }
 
 .footer__about__logo {
+    width: 400px;
     margin-bottom: 15px;
 }
 
@@ -2068,61 +2070,39 @@ ol {
 }
 
 .footer__widget {
-    margin-bottom: 30px;
-    overflow: hidden;
 }
 
-.footer__widget h6 {
+.footer__widget h5 {
     color: #1c1c1c;
     font-weight: 700;
-    margin-bottom: 10px;
+    font-size: 2.4rem;
+    margin-bottom: 20px;
 }
 
-.footer__widget ul {
-    width: 50%;
-    float: left;
+.footer__widget .item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.footer__widget ul li {
-    list-style: none;
-}
-
-.footer__widget ul li a {
+.footer__widget .item a {
     color: #1c1c1c;
-    font-size: 14px;
-    line-height: 32px;
+}
+
+.footer__widget .item a:hover {
+    color: #f2d349;
+}
+
+.footer__widget .item i {
+    color: #f2d349;
+    font-size: 20px;
 }
 
 .footer__widget p {
-    font-size: 14px;
+    font-size: 1.6rem;
     color: #1c1c1c;
-    margin-bottom: 30px;
-}
-
-.footer__widget form {
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.footer__widget form input {
-    width: 100%;
-    font-size: 16px;
-    padding-left: 20px;
-    color: #1c1c1c;
-    height: 46px;
-    border: 1px solid #ededed;
-}
-
-.footer__widget form input::placeholder {
-    color: #1c1c1c;
-}
-
-.footer__widget form button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0 26px;
-    height: 100%;
+    margin-bottom: 0;
 }
 
 .footer__widget .footer__widget__social a {
@@ -2149,13 +2129,13 @@ ol {
 }
 
 .footer__widget .footer__widget__social a:hover {
-    background: #7fad39;
+    background: #f2d349;
     color: #ffffff;
     border-color: #ffffff;
 }
 
 .footer__copyright {
-    border-top: 1px solid #ebebeb;
+    border-top: 1px solid #59554b;
     padding: 15px 0;
     overflow: hidden;
     margin-top: 20px;
@@ -2164,12 +2144,8 @@ ol {
 .footer__copyright__text {
     font-size: 14px;
     color: #1c1c1c;
-    float: left;
+    text-align: center;
     line-height: 25px;
-}
-
-.footer__copyright__payment {
-    float: right;
 }
 
 /*---------------------
