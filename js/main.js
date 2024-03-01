@@ -239,3 +239,24 @@ function showPassword1() {
         document.getElementById("lock1").className = "bx bxs-lock";
     }
 }
+
+/*------------------
+        FAQ
+    --------------------*/
+var acc = document.getElementsByClassName("faq__accordion");
+var i = 0;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+        this.classList.toggle("active-faq");
+        this.parentElement.classList.toggle("active-faq");
+
+        var panel = this.nextElementSibling;
+
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}

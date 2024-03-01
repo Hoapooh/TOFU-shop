@@ -2039,11 +2039,65 @@ ol {
 }
 
 /*---------------------
+  FAQ
+-----------------------*/
+.faq .title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.faq__accordion {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 2rem;
+    width: 100%;
+    padding: 20px 45px 10px;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.faq__accordion i {
+    font-size: 3rem;
+}
+
+.active-faq,
+.faq__accordion:hover {
+    background: #f1f7f5;
+}
+
+.faq__panel {
+    padding: 0 45px;
+    background-color: #fff;
+    overflow: hidden;
+    background: #f1f7f5;
+    display: none;
+}
+
+.faq__panel p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+    margin-bottom: 10px;
+}
+
+.faq__wrapper {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+/*---------------------
   Footer
 -----------------------*/
 
 .footer {
-    margin-top: 100px;
     background: #efede0;
     padding-top: 70px;
     padding-bottom: 0;
