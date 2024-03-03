@@ -3224,7 +3224,7 @@ ol {
     }
 }
 
-.scroll-to-top {
+.btnOnTop {
     position: fixed;
     bottom: 35px;
     right: 35px;
@@ -3232,14 +3232,22 @@ ol {
     background: #fff;
     border: 3px solid #333;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     justify-content: center;
     align-items: center;
 }
 
-.scroll-to-top img {
+.btnOnTop img {
     width: 50px;
     height: 50px;
+    border-radius: 50%;
 }
+.btnOnTop.showBtn {
+    display: block;
+  }
+  
+  .btnOnTop:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }

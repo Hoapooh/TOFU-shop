@@ -289,23 +289,21 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 /*------Scroll-to-top button------*/
-const btnOnTop = document.querySelector('scroll-to-top-btn');
-function checkHeight(){
-window.addEventListener('scroll', checkHeight)
-function checkHeight(){
-    if (window.scrollY <200 ) {
-        btnOnTop.style.display = "flex";
-    } else {
-        btnOnTop.style.display = "none";
-    }
+const btnOnTop = document.querySelector('.btn-On-Top');
+window.addEventListener('scroll', checkHeight);
+
+function checkHeight() {
+  if (window.scrollY > 200) {
+    btnOnTop.style.display = "block";
+  } else {
+    btnOnTop.style.display = "none";
+  }
 }
 
-};
-
 btnOnTop.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-    });
-    btnOnTop.style.display = "none";
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  btnOnTop.style.display = "none";
 });
