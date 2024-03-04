@@ -262,6 +262,87 @@ ol {
 }
 
 /*---------------------
+  About us
+-----------------------*/
+.about__us {
+    height: calc(100vh - 70px);
+    padding: 100px 0;
+    background: url(../img/about/about_background.jpg) no-repeat center center;
+}
+.about__us .row {
+    display: flex;
+}
+
+.about__img {
+    position: relative;
+    width: 48%;
+    height: 438px;
+}
+
+.about__info {
+    width: 52%;
+    padding: 58px 0 0 130px;
+}
+
+.about__img img {
+    position: absolute;
+    width: 270px;
+    height: 404px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.about__img img:first-child {
+    bottom: 0;
+    left: 0;
+}
+
+.about__img img:last-child {
+    top: 0;
+    right: 0;
+}
+
+.about__info .title {
+    background: #feac5e; /* fallback for old browsers */
+    background-image: linear-gradient(to right, #ff8008 0%, #ffc837 51%, #ff8008 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Sen;
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.26; /* 126.316% */
+    letter-spacing: -0.076rem;
+}
+
+.about__info .desc {
+    margin-top: 16px;
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.75; /* 175% */
+}
+
+.about__info .btn {
+    margin-top: 20px;
+    background-image: linear-gradient(to right, #ff8008 0%, #ffc837 51%, #ff8008 100%);
+    font-size: 1.8rem;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #fff;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+.about__info .btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*---------------------
   Profile
 -----------------------*/
 .profile {
@@ -618,6 +699,9 @@ ol {
 }
 
 .hero__ads .btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     color: #fff;
     text-align: center;
     padding: 16px 30px;
@@ -632,6 +716,10 @@ ol {
 .hero__ads .btn:hover {
     color: #f2d349;
     background: #5c6e58;
+}
+
+.hero__ads .btn i {
+    font-size: 3rem;
 }
 
 .hero__text {
