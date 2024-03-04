@@ -381,7 +381,7 @@
                                 </div>
                                 <div class="col-lg-8 col-md-7">
                                     <div class="filter__found">
-                                        <h6><span>16</span> Products found</h6>
+                                        <h6><span id="num__product"></span> Products found</h6>
                                     </div>
                                 </div>
                             </div>
@@ -605,10 +605,13 @@
                             </div>
                         </div>
                         <div class="product__pagination">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#"><i class="fa fa-long-arrow-right"></i></a>
+                            <a href="#!" class="first-btn" onclick="backBtn()"
+                                ><i class="fa fa-long-arrow-left"></i
+                            ></a>
+                            <div class="list"></div>
+                            <a href="#!" class="last-btn" onclick="nextBtn()"
+                                ><i class="fa fa-long-arrow-right"></i
+                            ></a>
                         </div>
                     </div>
                 </div>
@@ -692,5 +695,69 @@
         <script src="js/mixitup.min.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/main.js"></script>
+        <script>
+            let thisPage = 1;
+            let limit = 9;
+            let list = document.querySelectorAll(".product .product__item");
+            document.getElementById("num__product").innerHTML = list.length;
+
+            function loadItem() {
+                let beginGet = limit * (thisPage - 1);
+                let endGet = limit * thisPage - 1;
+                for (let i = 0; i < list.length; i++) {
+                    if (i >= beginGet && i <= endGet) {
+                        list[i].style.display = "";
+                    } else {
+                        list[i].style.display = "none";
+                    }
+                }
+                listPage();
+            }
+            loadItem();
+
+            function listPage() {
+                let count = Math.ceil(list.length / limit);
+                document.querySelector(".product__pagination .list").innerHTML = "";
+                for (i = 1; i <= count; i++) {
+                    let newPage = document.createElement("a");
+                    newPage.classList.add("link");
+                    newPage.innerHTML = i;
+                    if (i == thisPage) {
+                        newPage.classList.add("active");
+                    }
+                    newPage.setAttribute("onclick", "activeLink(" + i + ")");
+                    document.querySelector(".product__pagination .list").appendChild(newPage);
+                }
+            }
+
+            function activeLink(i) {
+                thisPage = i;
+                loadItem();
+            }
+
+            let link = document.getElementsByClassName("link");
+
+            function backBtn() {
+                if (thisPage > 1) {
+                    for (l of link) {
+                        l.classList.remove("active");
+                    }
+                    thisPage--;
+                    link[thisPage - 1].classList.add("active");
+                }
+                loadItem();
+            }
+            function nextBtn() {
+                let count = Math.ceil(list.length / limit);
+                if (thisPage < count) {
+                    for (l of link) {
+                        l.classList.remove("active");
+                    }
+                    thisPage++;
+                    link[thisPage - 1].classList.add("active");
+                }
+                loadItem();
+            }
+        </script>
     </body>
 </html>
