@@ -1622,6 +1622,9 @@ ol {
 
 .product__pagination {
     padding-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .product__pagination a {
@@ -1640,12 +1643,17 @@ ol {
     -ms-transition: all, 0.3s;
     -o-transition: all, 0.3s;
     transition: all, 0.3s;
+    cursor: pointer;
 }
 
 .product__pagination a:hover {
-    background: #7fad39;
-    border-color: #7fad39;
+    background: #f2d349;
+    border-color: #f2d349;
     color: #ffffff;
+}
+
+.product__pagination .first-btn {
+    margin-right: 0;
 }
 
 .product__pagination a:last-child {
