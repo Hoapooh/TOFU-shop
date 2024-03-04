@@ -459,7 +459,7 @@ ol {
     display: block;
 }
 
-.header__menu .list .item .header__menu__dropdown li:hover>a {
+.header__menu .list .item .header__menu__dropdown li:hover > a {
     color: #7fad39;
 }
 
@@ -476,7 +476,7 @@ ol {
     visibility: visible;
 }
 
-.header__menu .list .item:hover>a {
+.header__menu .list .item:hover > a {
     color: #f2d349;
 }
 
@@ -612,7 +612,7 @@ ol {
     display: block;
 }
 
-.header__cta__list .item .header__menu__dropdown li:hover>a {
+.header__cta__list .item .header__menu__dropdown li:hover > a {
     color: #7fad39;
 }
 
@@ -630,7 +630,7 @@ ol {
     visibility: visible;
 }
 
-.header__cta__list .item:hover>a {
+.header__cta__list .item:hover > a {
     color: #f2d349;
 }
 
@@ -2150,12 +2150,12 @@ ol {
     visibility: hidden;
 }
 
-.checkout__input__checkbox label input:checked~.checkmark {
+.checkout__input__checkbox label input:checked ~ .checkmark {
     background: #7fad39;
     border-color: #7fad39;
 }
 
-.checkout__input__checkbox label input:checked~.checkmark:after {
+.checkout__input__checkbox label input:checked ~ .checkmark:after {
     opacity: 1;
 }
 
@@ -2270,6 +2270,7 @@ ol {
   testimonial
 -----------------------*/
 .testimonial {
+    padding: 50px 0;
     background: #efede080;
 }
 
@@ -3334,8 +3335,8 @@ ol {
 }
 .btnOnTop.showBtn {
     display: block;
-  }
-  
-  .btnOnTop:hover {
+}
+
+.btnOnTop:hover {
     background-color: rgba(0, 0, 0, 0.6);
-  }
+}
