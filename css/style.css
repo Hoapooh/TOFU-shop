@@ -1320,6 +1320,11 @@ ol {
     margin-right: 6px;
 }
 
+.product__item__pic__hover li a {
+    background: #f2d349;
+    border-color: #f2d349;
+}
+
 .product__item__pic__hover li:last-child {
     margin-right: 0;
 }
@@ -1570,19 +1575,18 @@ ol {
 }
 
 .product__item__pic__hover li:hover a i {
-    color: #ffffff;
     transform: rotate(360deg);
 }
 
 .product__item__pic__hover li a {
     font-size: 16px;
-    color: #1c1c1c;
+    color: #fff;
     height: 40px;
     width: 40px;
     line-height: 40px;
     text-align: center;
     border: 1px solid #ebebeb;
-    background: #ffffff;
+    background: #f2d349;
     display: block;
     border-radius: 50%;
     -webkit-transition: all, 0.5s;
