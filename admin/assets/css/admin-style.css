@@ -247,3 +247,26 @@ a {
     margin-left: 15px;
     transform: rotate(180deg);
 }
+
+.main-user .item i:hover {
+    color: #f2d349;
+}
+
+/* ++++++++++++++++++ INCOME ++++++++++++++++++ */
+.main-income {
+    margin-top: 40px;
+}
+
+.main-income .item a:hover {
+    text-decoration: underline;
+}
+
+.main-income .income-total {
+    font-size: 2rem;
+    color: #171100;
+    font-weight: 600;
+}
+
+.main-income .income-total p + p {
+    margin-top: 10px;
+}

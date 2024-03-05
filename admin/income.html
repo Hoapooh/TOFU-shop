@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ADMIN | USER</title>
+        <title>ADMIN | INCOME</title>
 
         <!-- Favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="../favicon/apple-icon-57x57.png" />
@@ -57,8 +57,8 @@
                 <div class="row">
                     <a href="./admin-mainpage.html"><img src="../img/logo.png" alt="" class="image" /></a>
                     <ul class="list">
-                        <li class="item"><a href="#!">User</a></li>
-                        <li class="item"><a href="./income.html">Income</a></li>
+                        <li class="item"><a href="./user.html">User</a></li>
+                        <li class="item"><a href="#!">Income</a></li>
                         <li class="item"><a href="./product.html">Product</a></li>
                         <li class="item"><a href="./service.html">Service</a></li>
                     </ul>
@@ -71,111 +71,44 @@
             </div>
         </header>
 
-        <main class="main-user">
+        <main class="main-user main-income">
             <div class="content">
-                <h1 class="title">User Details</h1>
+                <h1 class="title">Order</h1>
                 <table class="table-content">
                     <thead>
                         <tr>
                             <th>Id</th>
                             <th>Username</th>
-                            <th>Password</th>
-                            <th>Name</th>
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th></th>
-                            <th></th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Amount</th>
+                            <th>View Order</th>
                         </tr>
                     </thead>
                     <tbody class="table-content-body">
                         <tr class="item">
                             <td>1</td>
                             <td>hoapooh</td>
-                            <td>123</td>
+                            <td>Done</td>
                             <td>Hoa</td>
                             <td>0123456789</td>
-                            <td>example@gmail.com</td>
-                            <td>User</td>
-                            <td><i class="ri-edit-2-fill" style="cursor: pointer"></i></td>
-                            <td><i class="ri-delete-bin-7-fill" style="cursor: pointer"></i></td>
+                            <td><a href="#!">View Details</a></td>
                         </tr>
                         <tr class="item">
                             <td>2</td>
                             <td>manhvl</td>
-                            <td>123</td>
+                            <td>Done</td>
                             <td>Manh</td>
                             <td>0321321321</td>
-                            <td>example1@gmail.com</td>
-                            <td>User</td>
-                            <td><i class="ri-edit-2-fill" style="cursor: pointer"></i></td>
-                            <td><i class="ri-delete-bin-7-fill" style="cursor: pointer"></i></td>
+                            <td><a href="#!">View Details</a></td>
                         </tr>
                         <tr class="item">
                             <td>3</td>
                             <td>Quynh</td>
-                            <td>18</td>
+                            <td>Done</td>
                             <td>Quynh</td>
                             <td>0123456789</td>
-                            <td>example@gmail.com</td>
-                            <td>User</td>
-                            <td><i class="ri-edit-2-fill" style="cursor: pointer"></i></td>
-                            <td><i class="ri-delete-bin-7-fill" style="cursor: pointer"></i></td>
-                        </tr>
-                        <tr class="item">
-                            <td>4</td>
-                            <td>Mai</td>
-                            <td>18</td>
-                            <td>Mai</td>
-                            <td>0123456789</td>
-                            <td>example@gmail.com</td>
-                            <td>User</td>
-                            <td><i class="ri-edit-2-fill" style="cursor: pointer"></i></td>
-                            <td><i class="ri-delete-bin-7-fill" style="cursor: pointer"></i></td>
-                        </tr>
-                        <tr class="item">
-                            <td>5</td>
-                            <td>Thuy</td>
-                            <td>18</td>
-                            <td>Thuy</td>
-                            <td>0123456789</td>
-                            <td>example@gmail.com</td>
-                            <td>User</td>
-                            <td><i class="ri-edit-2-fill" style="cursor: pointer"></i></td>
-                            <td><i class="ri-delete-bin-7-fill" style="cursor: pointer"></i></td>
-                        </tr>
-                        <tr class="item">
-                            <td>6</td>
-                            <td>Tung</td>
-                            <td>18</td>
-                            <td>Tung</td>
-                            <td>0123456789</td>
-                            <td>example@gmail.com</td>
-                            <td>User</td>
-                            <td><i class="ri-edit-2-fill" style="cursor: pointer"></i></td>
-                            <td><i class="ri-delete-bin-7-fill" style="cursor: pointer"></i></td>
-                        </tr>
-                        <tr class="item">
-                            <td>7</td>
-                            <td>hoapooh</td>
-                            <td>123</td>
-                            <td>Hoa</td>
-                            <td>0123456789</td>
-                            <td>example@gmail.com</td>
-                            <td>User</td>
-                            <td><i class="ri-edit-2-fill" style="cursor: pointer"></i></td>
-                            <td><i class="ri-delete-bin-7-fill" style="cursor: pointer"></i></td>
-                        </tr>
-                        <tr class="item">
-                            <td>8</td>
-                            <td>hoapooh</td>
-                            <td>123</td>
-                            <td>Hoa</td>
-                            <td>0123456789</td>
-                            <td>example@gmail.com</td>
-                            <td>User</td>
-                            <td><i class="ri-edit-2-fill" style="cursor: pointer"></i></td>
-                            <td><i class="ri-delete-bin-7-fill" style="cursor: pointer"></i></td>
+                            <td><a href="#!">View Details</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -195,6 +128,14 @@
                     <button class="btn btn-r" onclick="nextBtn()">
                         next<img src="../img/arrow.png" alt="" />
                     </button>
+                </div>
+            </div>
+
+            <div class="income-total">
+                <div class="content">
+                    <p class="desc">Total Order: 3</p>
+                    <p class="desc">Total Income: 900</p>
+                    <p class="desc"></p>
                 </div>
             </div>
         </main>
