@@ -1281,10 +1281,12 @@ ol {
     bottom: 20px;
 }
 
+
 .product__discount__item__pic {
     height: 270px;
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
 
 .product__discount__item__pic .product__discount__percent {
@@ -3216,7 +3218,7 @@ ol {
     .humberger__menu__wrapper .slicknav_nav a {
         padding: 8px 0;
     }
-
+m
     .humberger__menu__overlay {
         position: fixed;
         left: 0;
@@ -3337,9 +3339,10 @@ ol {
 }
 
 .btnOnTop img {
-    width: 50px;
+    width:50px;
     height: 50px;
     border-radius: 50%;
+    object-fit: cover;
 }
 .btnOnTop.showBtn {
     display: block;
