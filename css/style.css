@@ -1692,6 +1692,12 @@ ol {
     margin-right: 0;
 }
 
+.product__pagination .list .active {
+    background: #f2d349;
+    border-color: #f2d349;
+    color: #ffffff;
+}
+
 /*---------------------
   Shop Details
 -----------------------*/
