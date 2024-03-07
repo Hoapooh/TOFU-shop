@@ -551,6 +551,15 @@ ol {
     background: #fff;
 }
 
+.header__cta__list .search .btn {
+    border: none;
+    outline: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .header__cta__list .search-box {
     background: transparent;
     color: #333;
