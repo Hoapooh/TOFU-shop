@@ -24,6 +24,15 @@
         <meta name="msapplication-TileImage" content="./favicon/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
 
+        <!-- Bootstrap -->
+        <link
+            href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            rel="stylesheet"
+            id="bootstrap-css"
+        />
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
         <!-- Icon CSS -->
         <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
 
@@ -45,34 +54,86 @@
         <link rel="stylesheet" href="./css/login.css" />
     </head>
     <body>
-        <div class="admin-login">
-            <form action="login" method="POST">
+        <div id="logreg-forms">
+            <form action="signin" method="post" class="form-signin">
                 <div class="image">
                     <img src="./img/Logo-favicon.png" alt="" class="thumb" />
                 </div>
-                <h1 class="title">Login</h1>
+                <h1 class="title">Sign in</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required="" />
+                    <i class="bx bxs-user"></i>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder="Password" id="myPassword" required="" />
+                    <i class="bx bxs-lock" onclick="showPassword1()" id="lock"></i>
+                </div>
+                <!-- Remember and forgot password features
+                <div class="remember-forgot">
+                    <label><input type="checkbox" name="" id="" />Remember me</label>
+                    <a href="" class="forgot">Forgot password?</a>
+                </div> -->
+
+                <button class="btn" type="submit">Sign in</button>
+
+                <div class="register-link">
+                    <p>New to TOFU? <a href="" id="btn-signup"> Create an Account </a></p>
+                </div>
+            </form>
+
+            <!-- Sign up -->
+            <form action="/signup/" class="form-signup">
+                <div class="image">
+                    <img src="./img/Logo-favicon.png" alt="" class="thumb" />
+                </div>
+                <h1 class="title">Sign Up</h1>
                 <div class="input-box">
                     <input type="text" placeholder="Username" required />
                     <i class="bx bxs-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required id="myPassword" />
-                    <i class="bx bxs-lock" onclick="showPassword()" id="lock"></i>
+                    <input type="password" placeholder="Password" required id="myPassword1" />
+                    <i class="bx bxs-lock" onclick="showPassword2()" id="lock1"></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Confirm Password" required id="myPassword2" />
+                    <i class="bx bxs-lock" onclick="showPassword3()" id="lock2"></i>
                 </div>
 
-                <!-- Remember and forgot password features -->
-                <!-- <div class="remember-forgot">
-                    <label><input type="checkbox" name="" id="" />Remember me</label>
-                    <a href="" class="forgot">Forgot password?</a>
-                </div> -->
-                <input type="submit" value="Sign in" class="btn" />
-
-                <div class="register-link">
-                    <p>New to TOFU? <a href="./register.html">Create an account</a></p>
-                </div>
+                <button class="btn" type="submit">Sign Up</button>
+                <a href="#" id="cancel_signup"> Back</a>
             </form>
+            <br />
         </div>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
         <script src="./js/main.js"></script>
+        <script>
+            function toggleResetPswd(e) {
+                e.preventDefault();
+                $("#logreg-forms .form-signin").toggle(); // display:block or none
+                $("#logreg-forms .form-reset").toggle(); // display:block or none
+            }
+
+            function toggleSignUp(e) {
+                e.preventDefault();
+                $("#logreg-forms .form-signin").toggle(); // display:block or none
+                $("#logreg-forms .form-signup").toggle(); // display:block or none
+            }
+
+            $(() => {
+                // Login Register Form
+                $("#logreg-forms #forgot_pswd").click(toggleResetPswd);
+                $("#logreg-forms #cancel_reset").click(toggleResetPswd);
+                $("#logreg-forms #btn-signup").click(toggleSignUp);
+                $("#logreg-forms #cancel_signup").click(toggleSignUp);
+            });
+        </script>
     </body>
 </html>

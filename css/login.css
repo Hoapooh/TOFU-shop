@@ -1,3 +1,4 @@
+/* sign in FORM */
 * {
     box-sizing: border-box;
 }
@@ -23,7 +24,7 @@ a {
     text-decoration: none;
 }
 
-.admin-login {
+#logreg-forms {
     width: 420px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.2);
@@ -34,9 +35,14 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+#logreg-forms .form-signup {
+    display: none;
+}
+
 .image {
     text-align: center;
 }
+
 .thumb {
     width: 50px;
     border-radius: 50%;
@@ -82,6 +88,7 @@ a {
     transform: translateY(-50%);
     font-size: 20px;
 }
+
 /* 
 .remember-forgot {
     display: flex;
@@ -116,6 +123,10 @@ a {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.btn:hover {
+    opacity: 0.9;
+}
+
 .register-link {
     font-size: 1.45rem;
     text-align: center;
@@ -133,4 +144,10 @@ a {
 
 .register-link p a:hover {
     text-decoration: underline;
+}
+
+#cancel_signup {
+    display: inline-block;
+    margin-top: 20px;
+    color: #fff;
 }

@@ -218,7 +218,7 @@
 })(jQuery);
 
 // Show password field
-function showPassword() {
+function showPassword1() {
     var x = document.getElementById("myPassword");
     if (x.type === "password") {
         x.type = "text";
@@ -229,7 +229,7 @@ function showPassword() {
     }
 }
 
-function showPassword1() {
+function showPassword2() {
     var x1 = document.getElementById("myPassword1");
     if (x1.type === "password") {
         x1.type = "text";
@@ -237,6 +237,17 @@ function showPassword1() {
     } else {
         x1.type = "password";
         document.getElementById("lock1").className = "bx bxs-lock";
+    }
+}
+
+function showPassword3() {
+    var x2 = document.getElementById("myPassword2");
+    if (x2.type === "password") {
+        x2.type = "text";
+        document.getElementById("lock2").className = "bx bxs-lock-open";
+    } else {
+        x2.type = "password";
+        document.getElementById("lock2").className = "bx bxs-lock";
     }
 }
 
@@ -288,4 +299,3 @@ var swiper = new Swiper(".mySwiper", {
         },
     },
 });
-
