@@ -548,16 +548,28 @@ ol {
     align-items: center;
     padding: 10px;
     border-radius: 28px;
+    gap: 5px;
     background: #fff;
 }
 
 .header__cta__list .search .btn {
+    width: 25px;
+    height: 25px;
     border: none;
     outline: none;
+    border-radius: 50%;
     background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header__cta__list .search .btn:hover {
+    background: #f2d34980;
+}
+
+.header__cta__list .search .btn:disabled {
+    background: transparent;
 }
 
 .header__cta__list .search-box {
