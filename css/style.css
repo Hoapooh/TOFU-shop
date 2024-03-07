@@ -1099,13 +1099,20 @@ ol {
 }
 
 .sidebar__item ul li a {
-    font-size: 16px;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 1.8rem;
     color: #1c1c1c;
     line-height: 39px;
     display: block;
 }
 
-.sidebar__item .latest-product__text {
+.sidebar__item ul li a:hover {
+    color: #fff;
+    background: #f2d349;
+}
+
+.sidebar__item ul li a .sidebar__item .latest-product__text {
     position: relative;
 }
 
